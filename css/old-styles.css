@@ -648,8 +648,8 @@ input {
   color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
   font-weight: 400;
-  line-height: 14px; /* 116.667% */
-  letter-spacing: 0.48px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 .form-comment:focus {
   border-color: #4d5ae5;
