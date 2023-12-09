@@ -448,6 +448,11 @@ input {
     text-align: left;
   }
 }
+@media screen and (min-width: 768px) {
+  .team-container {
+    max-width: 584px;
+  }
+}
 .team-section {
   background: #f4f4fd;
   padding: 96px 28px;
@@ -463,8 +468,6 @@ input {
   margin-left: auto;
   margin-right: auto;
 }
-.team-list {
-}
 .team-member {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
@@ -472,8 +475,19 @@ input {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+  .team-member {
+    width: calc((100% - 24px) / 2);
+  }
+}
 .team-review-container {
-  max-width: 232px;
   padding: 32px 0;
 }
 .team-name {
