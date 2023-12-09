@@ -548,6 +548,7 @@ input {
   margin-left: auto;
   margin-right: auto;
 }
+
 .portfolio-list {
 }
 .portfolio-item-container {
@@ -566,6 +567,18 @@ input {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
 }
 .overlay-text {
   color: #f4f4fd;
