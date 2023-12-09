@@ -621,6 +621,7 @@ input {
 .footer-container {
   display: block;
 }
+
 .footer-logo-container {
   display: flex;
   flex-direction: column;
@@ -632,7 +633,13 @@ input {
   margin: 0 auto;
   margin-bottom: 72px;
 }
-.footer-form-container {
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 72px;
+  }
 }
 .footer-logo {
   color: #4d5ae5;
