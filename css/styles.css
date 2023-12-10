@@ -730,6 +730,11 @@ input {
   background-color: #2e2f42;
   padding: 97.5px 0;
 }
+@media screen and (min-width: 1158px) {
+  .page-footer {
+    padding: 100px 0;
+  }
+}
 .footer-container {
   display: block;
 }
@@ -761,6 +766,20 @@ input {
   .footer-social-container {
     width: 208px;
     margin: 0;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-container {
+    max-width: 1158px;
+    display: flex;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+  .footer-logo-container {
+    margin-right: 120px;
+  }
+  .footer-social-container {
+    margin-right: auto;
   }
 }
 .footer-logo {
