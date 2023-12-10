@@ -531,9 +531,20 @@ input {
     max-width: 584px;
   }
 }
+@media screen and (min-width: 1158px) {
+  .team-container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
 .team-section {
   background: #f4f4fd;
   padding: 96px 28px;
+}
+@media screen and (min-width: 1158px) {
+  .team-section {
+    padding: 120px 0;
+  }
 }
 .team-title {
   color: #2e2f42;
@@ -563,6 +574,15 @@ input {
   }
   .team-member {
     width: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .team-list {
+    gap: 24px;
+    flex-wrap: nowrap;
+  }
+  .team-member {
+    width: calc((100% - 72px) / 4);
   }
 }
 .team-review-container {
