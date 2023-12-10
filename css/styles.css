@@ -1,4 +1,4 @@
-/* Загальні стилі */
+/* Common styles */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -32,6 +32,7 @@ img {
 input {
   outline: transparent;
 }
+
 .container {
   max-width: 320px;
   margin-right: auto;
@@ -49,6 +50,7 @@ input {
     padding: 0 15px;
   }
 }
+/* Header styles */
 .page-header {
   background-color: #fff;
   border-bottom: 1px solid #e7e9fc;
@@ -76,7 +78,6 @@ input {
     align-items: center;
   }
 }
-
 .header-logo {
   font-family: Raleway, sans-serif;
   color: #4d5ae5;
@@ -149,7 +150,6 @@ input {
   left: 0;
   bottom: -1px;
 }
-
 .header-address {
   display: none;
 }
@@ -203,10 +203,12 @@ input {
 .address-link:focus {
   color: #404bbf;
 }
-.menu-icon-container {
-  display: none;
+@media screen and (min-width: 768px) {
+  .menu-icon-container {
+    display: none;
+  }
 }
-
+/* Mob-menu styles */
 .mob-menu {
   width: 320px;
   height: 100%;
@@ -330,12 +332,14 @@ input {
 .menu-social-icon {
   fill: #f4f4fd;
 }
+/* Main styles */
 .main {
   background-color: #fff;
 }
 .section {
   padding: 0;
 }
+/* Hero-section styles */
 .hero-section {
   background-color: #2e2f42;
   background-image: linear-gradient(
@@ -430,6 +434,7 @@ input {
 .order-button:focus {
   background-color: #404bbf;
 }
+/* Benefits-section styles */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -526,6 +531,7 @@ input {
     text-align: left;
   }
 }
+/* Team-section styles */
 @media screen and (min-width: 768px) {
   .team-container {
     max-width: 584px;
@@ -632,6 +638,7 @@ input {
 .team-social-icon {
   fill: #f4f4fd;
 }
+/* Portfolio-section styles */
 .portfolio-section-container {
   padding: 96px 16px;
 }
@@ -692,6 +699,7 @@ input {
     width: calc((100% - 48px) / 3);
   }
 }
+/* Overlay styles */
 .overlay-text {
   color: #f4f4fd;
   font-size: 16px;
@@ -726,6 +734,7 @@ input {
   color: #434455;
   line-height: 1.5;
 }
+/* Footer styles */
 .page-footer {
   background-color: #2e2f42;
   padding: 97.5px 0;
@@ -841,6 +850,7 @@ input {
 .footer-social-icon {
   fill: #f4f4fd;
 }
+/* Footer-form styles */
 .subscribe-text {
   display: block;
   font-weight: 500;
@@ -914,6 +924,7 @@ input {
   margin-left: 16px;
   fill: #ffffff;
 }
+/* Modal styles */
 .backdrop {
   position: fixed;
   top: 0;
