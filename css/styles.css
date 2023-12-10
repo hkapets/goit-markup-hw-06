@@ -635,10 +635,20 @@ input {
 }
 @media screen and (min-width: 768px) {
   .footer-container {
+    max-width: 584px;
     display: flex;
+    align-items: first baseline;
     flex-wrap: wrap;
-    row-gap: 24px;
-    column-gap: 72px;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  .footer-logo-container {
+    width: 264px;
+    margin: 0;
+  }
+  .footer-social-container {
+    width: 208px;
+    margin: 0;
   }
 }
 .footer-logo {
@@ -712,6 +722,15 @@ input {
 }
 .subscribe-form {
   display: block;
+}
+@media screen and (min-width: 768px) {
+  .subscribe-form {
+    display: flex;
+    gap: 24px;
+  }
+  .subscribe-text {
+    text-align: left;
+  }
 }
 .subscribe-email {
   font-size: 12px;
