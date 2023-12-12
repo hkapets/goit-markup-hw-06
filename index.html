@@ -59,14 +59,14 @@
         </address>
         <!-- Header address -->
         <!-- Mob menu -->
-        <button class="menu-icon-button">
+        <button data-menu-open class="menu-icon-button">
           <svg class="menu-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
-      <div class="mob-menu">
-        <button class="menu-close-button" type="button">
+      <div data-menu class="mob-menu">
+        <button data-menu-close class="menu-close-button" type="button">
           <svg
             class="modal-close-button-icon"
             width="8"
@@ -827,5 +827,6 @@
     </div>
     <!-- backdrop -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
