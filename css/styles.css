@@ -41,7 +41,7 @@ input {
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -56,17 +56,17 @@ input {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  padding: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding: 0;
+  }
 }
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-}
-@media screen and (min-width: 768px) {
-  .header-container {
-    padding: 0;
-  }
 }
 .header-nav {
   color: #434455;
@@ -181,18 +181,13 @@ input {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration-line: none;
-  padding: 16px 0;
+  padding: 6px 0;
   display: block;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-address-mail {
-  padding-bottom: 12px;
-}
-.header-address-tel {
-  padding-top: 0;
-}
+
 @media screen and (min-width: 1158px) {
   .address-link {
     font-size: 16px;
@@ -203,8 +198,13 @@ input {
 .address-link:focus {
   color: #404bbf;
 }
+.menu-icon-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
-  .menu-icon-container {
+  .menu-icon-button {
     display: none;
   }
 }
@@ -213,7 +213,7 @@ input {
 }
 /* Mob-menu styles */
 .mob-menu {
-  width: 320px;
+  width: 100%;
   height: 100%;
   background-color: #ffffff;
   padding: 72px 16px;
@@ -226,6 +226,11 @@ input {
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .mob-menu.is-open {
   opacity: 1;
@@ -261,8 +266,8 @@ input {
   border: none;
   background-color: #404bbf;
 }
-.menu-nav-container {
-  margin-bottom: 168px;
+.menu-nav {
+  margin-bottom: auto;
 }
 .menu-nav-list-item {
   margin-bottom: 40px;
@@ -340,7 +345,12 @@ input {
   background-color: #fff;
 }
 .section {
-  padding: 0;
+  padding: 96px 0;
+}
+@media screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
 }
 /* Hero-section styles */
 .hero-section {
@@ -416,7 +426,7 @@ input {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1158px;
+    max-width: 1140px;
     padding: 188px 0;
   }
 }
@@ -495,9 +505,6 @@ input {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.benefits-list {
-  margin: 96px 0;
-}
 .benefits-item {
   line-height: 1.5;
   margin-bottom: 72px;
@@ -507,14 +514,6 @@ input {
 }
 
 @media screen and (min-width: 768px) {
-  .benefits-section {
-    margin: 0;
-    padding: 0;
-  }
-  .benefits-container {
-    width: 736px;
-    padding: 0;
-  }
   .benefits-list {
     display: flex;
     flex-direction: row;
@@ -528,10 +527,6 @@ input {
   }
 }
 @media screen and (min-width: 1158px) {
-  .benefits-container {
-    width: 1158px;
-    padding: 0 15px;
-  }
   .benefits-list {
     display: flex;
     gap: 24px;
@@ -573,6 +568,7 @@ input {
 .benefits-item-text {
   color: #434455;
   line-height: 1.5;
+  font-weight: 500;
 }
 @media screen and (min-width: 768px) {
   .benefits-item-title {
@@ -586,14 +582,19 @@ input {
   }
 }
 @media screen and (min-width: 1158px) {
+  .benefits-item-title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .benefits-item-text {
+    font-weight: 400;
+  }
   .team-container {
     max-width: 1158px;
-    padding: 0 15px;
   }
 }
 .team-section {
   background: #f4f4fd;
-  padding: 96px 28px;
 }
 @media screen and (min-width: 1158px) {
   .team-section {
@@ -617,6 +618,11 @@ input {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  width: 264px;
+  margin-bottom: 72px;
+}
+.team-member:last-child {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
   .team-list {
@@ -628,6 +634,7 @@ input {
   }
   .team-member {
     width: calc((100% - 24px) / 2);
+    margin: 0;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -687,14 +694,6 @@ input {
   fill: #f4f4fd;
 }
 /* Portfolio-section styles */
-.portfolio-section-container {
-  padding: 96px 16px;
-}
-@media screen and (min-width: 1158px) {
-  .portfolio-section-container {
-    padding: 120px 0;
-  }
-}
 .portfolio-title {
   color: #2e2f42;
   font-size: 36px;
@@ -706,6 +705,7 @@ input {
   margin-left: auto;
   margin-right: auto;
 }
+
 .portfolio-item-container {
   position: relative;
   overflow: hidden;
@@ -733,6 +733,7 @@ input {
   }
   .portfolio-item {
     width: calc((100% - 24px) / 2);
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -785,7 +786,7 @@ input {
 /* Footer styles */
 .page-footer {
   background-color: #2e2f42;
-  padding: 97.5px 0;
+  padding: 96px 0;
 }
 @media screen and (min-width: 1158px) {
   .page-footer {
@@ -850,7 +851,12 @@ input {
   text-decoration-line: none;
   text-align: center;
   display: inline-block;
-  margin-bottom: 17.5px;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    text-align: left;
+  }
 }
 .footer-logo-part {
   color: #f4f4fd;
@@ -868,6 +874,11 @@ input {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-social-text {
+    text-align: left;
+  }
 }
 .footer-contacts-list {
   display: flex;
@@ -926,13 +937,13 @@ input {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
-  width: 264px;
   height: 40px;
   border: 1px solid #ffffff;
   border-radius: 4px;
   background-color: transparent;
   padding-left: 16px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  width: 100%;
 }
 .subscribe-email::placeholder {
   color: #ffffff;
@@ -943,6 +954,12 @@ input {
 .subscribe-label {
   display: block;
   margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .subscribe-label {
+    margin-bottom: 0;
+    width: 264px;
+  }
 }
 .subscribe-button {
   font-family: "Roboto", sans-serif;
@@ -997,7 +1014,7 @@ input {
   min-height: 584px;
   border-radius: 4px;
   background-color: #fcfcfc;
-  padding: 72px 16px;
+  padding: 72px 16px 24px 16px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1130,6 +1147,7 @@ input {
 }
 .own-checkbox {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   fill: transparent;
