@@ -820,6 +820,7 @@ input {
   .footer-logo-container {
     width: 264px;
     margin: 0;
+    align-items: flex-start;
   }
   .footer-social-container {
     width: 208px;
@@ -852,11 +853,6 @@ input {
   text-align: center;
   display: inline-block;
   margin-bottom: 16px;
-}
-@media screen and (min-width: 768px) {
-  .footer-logo {
-    text-align: left;
-  }
 }
 .footer-logo-part {
   color: #f4f4fd;
